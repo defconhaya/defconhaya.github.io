@@ -1,0 +1,37 @@
+<script>
+    function calculate()
+    {
+        var concentration = parseInt( document.getElementById("concentration").value );
+        var totalmass = parseInt( document.getElementById("totalmass").value );
+        var solutmass = parseInt( document.getElementById("solute").value );
+        console.log(concentration);
+        console.log(totalmass);
+        console.log(solutmass);   
+        if (concentration != NaN && totalmass != NaN)
+        {
+            document.getElementById("solute").value = calc_solute(totalmass, concentration);
+        }
+    }
+    function calc_solute(total, conc)
+    {
+        return total * conc/100;
+    }
+</script>
+<input type="text" id="totalmass" />
+<label for="totalmass"> Total mass (g)</label>
+
+<input type="text" id="concentration" placeholder="10%" />
+<label for="concentration" > Solution concentration (%)</label>
+
+<input type="text" id="solute"  />
+<label for="solute"> Solute mass (g)</label>
+
+
+
+
+<button onclick="calculate();">Calculate</button>
+
+<span style="background-color: brown;">
+sgfsgsfd
+sggfhgf</span>-----#########################
+
