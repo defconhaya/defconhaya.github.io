@@ -1,4 +1,18 @@
-<input type="text" id="name" />
+<script>
+    function jap()
+    {   
+        alphabet = {"a":"ka","b":"tu","c":"mi","d":"te","e":"ku","f":"lu","g":"ji","h":"ri","i":"ki","j":"zu","k":"me","l":"ta","m":"rin","n":"to","o":"mo","p":"no","q":"ke","r":"shi","s":"ari","t":"chi","u":"do","v":"ru","w":"mei","x":"na","y":"fu","z":"zi"}
+        var name =  document.getElementById("name").value.toLowerCase();        
+        var jname = "";
+        for (const l in name) 
+        {
+            jname += alphabet[name[l]];                        
+        }
+        document.getElementById("jname").innerHTML = jname;
+    }
+</script>
+
+<input type="text" id="name" onkeyup="jap()"/>
 <label for="name"> Your actual name</label>
-<input type="text" id="jname" />
+<p id="jname"></p>
 <label for="jname"> Your japanese name</label>
